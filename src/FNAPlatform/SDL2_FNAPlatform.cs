@@ -2708,6 +2708,7 @@ namespace Microsoft.Xna.Framework
 
 		private static SDL.SDL_EventFilter win32OnPaint = Win32OnPaint;
 		private static SDL.SDL_EventFilter prevEventFilter;
+		[ObjCRuntime.MonoPInvokeCallback(typeof(SDL.SDL_EventFilter))]
 		private static unsafe int Win32OnPaint(IntPtr userdata, IntPtr evtPtr)
 		{
 			SDL.SDL_Event* evt = (SDL.SDL_Event*) evtPtr;
